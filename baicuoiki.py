@@ -1,6 +1,8 @@
 import random
 
-word = ['python', 'coding', 'pycharm', 'apple', 'eye', ]
+with open('word.txt','r') as f:
+    words= f.readlines()
+
 valid = '1'
 
 
@@ -26,14 +28,13 @@ def full():
         x = input("Invalid. Please try again: ")
     return x
 
-
 print("\nWelcome to our GUESS THE WORD game")
 name = input("What's your name: ")
 print("Ok, " + name + ". Let's start!")
 
 while valid == '1':
     print("-"*50)
-    pick: str = random.choice(word).upper()   # Chọn từ trong thư viện
+    pick: str = random.choice(words)[:-1].upper()  # Chọn từ trong thư viện
 
     ans = space()
     tries = 0  # số lần sai trong khoảng cho phép
@@ -85,3 +86,5 @@ while valid == '1':
 
 print("-"*50)
 print("See you later, " + name + ". Thank you for playing our game!")
+
+         
