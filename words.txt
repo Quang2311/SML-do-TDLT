@@ -1,0 +1,11 @@
+python
+pycharm
+apple
+samsung
+oppo
+coding
+Java
+Honda
+Mazda
+BMW
+Kia Morning
